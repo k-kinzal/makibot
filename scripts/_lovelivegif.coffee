@@ -8,7 +8,7 @@
 #   HUBOT_TUMBLR_API_KEY - A Tumblr OAuth Consumer Key will work fine
 #
 # Commands:
-#   llgif / lovelivegif - ラブライブgifアニメをランダムで出す
+#   ラブライブ - ラブライブgifアニメをランダムで出す
 
 
 tumblr = require "tumblrbot"
@@ -21,6 +21,6 @@ getGif = (blog, msg) ->
     msg.send post.photos[0].original_size.url
 
 module.exports = (robot) ->
-  robot.hear /llgif|lovelivegif/i, (msg) ->
+  robot.hear /ラブライブ|lovelive|love live/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
     getGif blog, msg

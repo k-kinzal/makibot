@@ -2,8 +2,10 @@
 #   makigif
 #
 # Commands:
-#   makigif - 西木野真姫が映ってるgifアニメをランダムで表示
-
+#   まきちゃんの様子 - 西木野真姫が映ってるgifアニメをランダムで表示
+#
+# Author
+#   sanographix
 
 makigif = [
   "http://37.media.tumblr.com/6ecdbb327dd232eb564fe4250a5a3fd4/tumblr_n7ltynJY161r3rdh2o1_500.gif",
@@ -90,6 +92,6 @@ makigif = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /^(まき|maki|マッキー|西木野|真姫).*gif/i, (msg) ->
+  robot.hear /^(まき|maki|マッキー|西木野|真姫).*(様子|元気|見|？)/i, (msg) ->
     gifs = msg.random makigif
-    msg.send "はいどうぞ💖 #{gifs}"
+    msg.send "はい✨  #{gifs}"

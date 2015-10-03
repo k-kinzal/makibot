@@ -3,6 +3,9 @@
 #
 # Commands:
 #   がんばる - がんばるぞい！
+#
+# Author
+#   sanographix
 
 module.exports = (robot) ->
   robot.hear /がんば|頑張/, (msg) ->
